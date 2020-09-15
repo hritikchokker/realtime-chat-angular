@@ -12,6 +12,10 @@ const routes: Routes = [
   {
     path: AUTH_ROUTE.path,
     loadChildren:()=>import('./auth/auth.module').then(m=>m.AuthModule)
+  },
+  {
+    path:'**',
+    loadChildren:()=>import('./page-not-found/page-not-found.module').then(m=> m.PageNotFoundModule)
   }
 ];
 
