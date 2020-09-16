@@ -1,1 +1,44 @@
-<p>login works!</p>
+<div class="login-form">
+
+    <mat-card class="example-card">
+        <mat-card-header>
+            <mat-card-title>Author Hritik</mat-card-title>
+            <mat-card-subtitle>MEAN stack app</mat-card-subtitle>
+        </mat-card-header>
+        <!-- <img mat-card-image src="https://material.angular.io/assets/img/examples/shiba2.jpg" alt="Photo of a Shiba Inu"> -->
+        <mat-card-content>
+            <form [formGroup]="''" class="example-form">
+                <div class="login-form__email" fxLayout="row">
+                    <div gdColumns="100px">
+                        <mat-form-field class="example-full-width">
+                            <mat-label>Email</mat-label>
+                            <!-- [formControl]="emailFormControl" [errorStateMatcher]="matcher" -->
+                            <input matInput placeholder="Ex. pat@example.com">
+                            <mat-hint>Errors appear instantly!</mat-hint>
+                        </mat-form-field>
+
+                    </div>
+                    <div class="login-form__password" gdColumns="100px">
+                        <mat-form-field class="example-full-width">
+                            <mat-label>Password</mat-label>
+                            <!-- [formControl]="emailFormControl" [errorStateMatcher]="matcher" -->
+                            <input type="password" matInput placeholder="Ex. Jonh@123">
+                            <mat-hint>Errors appear instantly!</mat-hint>
+                        </mat-form-field>
+                    </div>
+                </div>
+
+            </form>
+
+            <!-- <p>
+                The Shiba Inu is the smallest of the six original and distinct spitz breeds of dog from Japan.
+                A small, agile dog that copes very well with mountainous terrain, the Shiba Inu was originally
+                bred for hunting.
+            </p> -->
+        </mat-card-content>
+        <mat-card-actions>
+            <button mat-button>Login</button>
+            <button [routerLink]="[registerRoute]" mat-button>Register</button>
+        </mat-card-actions>
+    </mat-card>
+</div>

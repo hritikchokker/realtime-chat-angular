@@ -8,6 +8,8 @@
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
+    "prenow:publish":"npm run build:prod",
+    "now:publish":"now --platform-version 2 dist/angular-chat",
     "analyze": "ng build --configuration=production --statsJson=true && webpack-bundle-analyzer dist/angular-chat/stats.json",
     "http-server": "http-server -p 8080 -c-1 dist/angular-chat"
   },

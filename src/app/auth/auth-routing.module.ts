@@ -12,12 +12,16 @@ const routes: Routes = [
     loadChildren: () => import('./pages/login/login.module').then(m => m.LoginModule)
   },
   {
+    path: AUTH_ROUTES_CONSTANTS.REGISTER_ROUTE.path,
+    loadChildren: () => import('./pages/register/register.module').then(m => m.RegisterModule)
+  },
+  {
     path: AUTH_ROUTES_CONSTANTS.FORGOT_PASSWORD_ROUTE.path,
     loadChildren: () => import('./pages/forgot-password/forgot-password.module').then(m => m.ForgotPasswordModule)
   },
   {
-    path:AUTH_ROUTES_CONSTANTS.RESET_PASSWORD_ROUTE.path,
-    loadChildren:()=>import('./pages/reset-password/reset-password.module').then(m=> m.ResetPasswordModule)
+    path: AUTH_ROUTES_CONSTANTS.RESET_PASSWORD_ROUTE.path,
+    loadChildren: () => import('./pages/reset-password/reset-password.module').then(m => m.ResetPasswordModule)
   }
 ];
 

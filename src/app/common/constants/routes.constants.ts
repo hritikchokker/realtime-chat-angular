@@ -1,3 +1,6 @@
 export const AUTH_ROUTE ={
-    path:'auth'
+    path:'auth',
+    get url():string{
+        return `/${this.path}`
+    }
 }
