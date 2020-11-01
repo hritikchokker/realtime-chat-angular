@@ -1,6 +1,7 @@
-import { NgModule } from '@angular/core';
-import { Routes, RouterModule } from '@angular/router';
+import { RouterModule, Routes } from '@angular/router';
+
 import { AUTH_ROUTES_CONSTANTS } from './constants/routes.constants';
+import { NgModule } from '@angular/core';
 const routes: Routes = [
   {
     path: '',

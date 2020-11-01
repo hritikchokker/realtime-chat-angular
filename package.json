@@ -8,10 +8,13 @@
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "prenow:publish":"npm run build:prod",
-    "now:publish":"now --platform-version 2 dist/angular-chat",
+    "build:scully":"ng build --configuration=production && npm run scully",
+    "prenow:publish": "npm run build:prod",
+    "now:publish": "now --platform-version 2 dist/angular-chat",
     "analyze": "ng build --configuration=production --statsJson=true && webpack-bundle-analyzer dist/angular-chat/stats.json",
-    "http-server": "http-server -p 8080 -c-1 dist/angular-chat"
+    "http-server": "http-server -p 8080 -c-1 dist/angular-chat",
+    "scully": "scully",
+    "scully:serve": "scully serve"
   },
   "private": true,
   "dependencies": {
@@ -32,6 +35,9 @@
     "@ngrx/entity": "^10.0.0",
     "@ngrx/store": "^10.0.0",
     "@ngrx/store-devtools": "^10.0.0",
+    "@scullyio/init": "^1.0.1",
+    "@scullyio/ng-lib": "^1.0.0",
+    "@scullyio/scully": "^1.0.0",
     "rxjs": "~6.6.0",
     "tslib": "^2.0.0",
     "zone.js": "~0.10.2"
