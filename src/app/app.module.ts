@@ -14,7 +14,6 @@ import { StoreDevtoolsModule } from '@ngrx/store-devtools'
 import { StoreModule } from '@ngrx/store';
 import { entityConfig } from './entity-metadata';
 import { environment } from '../environments/environment';
-
 @NgModule({
   declarations: [
     AppComponent
@@ -22,9 +21,9 @@ import { environment } from '../environments/environment';
   imports: [
     BrowserModule,
     AppRoutingModule,
+    FlexLayoutModule,
     BrowserAnimationsModule,
     HttpClientModule,
-    FlexLayoutModule,
     FieldErrorModule,
     ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production }),
     StoreModule.forRoot({}),
