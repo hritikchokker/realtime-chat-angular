@@ -1,19 +1,19 @@
-import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
-
-import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { AppRoutingModule } from './app-routing.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { ServiceWorkerModule } from '@angular/service-worker';
-import { environment } from '../environments/environment';
-import { StoreModule } from '@ngrx/store';
-import { EntityDataModule } from '@ngrx/data';
-import { entityConfig } from './entity-metadata';
+import { BrowserModule } from '@angular/platform-browser';
 import { EffectsModule } from '@ngrx/effects';
-import { StoreDevtoolsModule } from '@ngrx/store-devtools'
-import { HttpClientModule } from '@angular/common/http';
+import { EntityDataModule } from '@ngrx/data';
+import { FieldErrorModule } from './common/directives/field-error/field-error.module';
 import { FlexLayoutModule } from '@angular/flex-layout';
+import { HttpClientModule } from '@angular/common/http';
+import { NgModule } from '@angular/core';
 import { ScullyLibModule } from '@scullyio/ng-lib';
+import { ServiceWorkerModule } from '@angular/service-worker';
+import { StoreDevtoolsModule } from '@ngrx/store-devtools'
+import { StoreModule } from '@ngrx/store';
+import { entityConfig } from './entity-metadata';
+import { environment } from '../environments/environment';
 
 @NgModule({
   declarations: [
@@ -25,6 +25,7 @@ import { ScullyLibModule } from '@scullyio/ng-lib';
     BrowserAnimationsModule,
     HttpClientModule,
     FlexLayoutModule,
+    FieldErrorModule,
     ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production }),
     StoreModule.forRoot({}),
     EffectsModule.forRoot([]),
