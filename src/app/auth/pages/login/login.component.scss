@@ -1,0 +1,54 @@
+.container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  margin-top: 30px;
+  // height: 400px;
+  width: 500px;
+}
+
+.bounds {
+  background-color: #ddd;
+  height: 800px;
+}
+
+
+.sec1 {
+  background: red;
+  color: white;
+  text-transform: uppercase
+}
+
+.sec2 {
+  background: yellow;
+  color: blue;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: inherit;
+
+}
+
+mat-card,mat-focus-indicator{
+  width: inherit;
+}
+.sec3 {
+  background: blue;
+  color: white;
+  text-transform: uppercase
+}
+
+.sec1,
+.sec2,
+.sec3 {
+  padding-top: 20px;
+  text-align: center
+}
+
+
+
+.content {
+  min-width: 300px;
+  /*height: 400px;*/
+}
