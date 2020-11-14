@@ -6,7 +6,7 @@ import { Component } from '@angular/core';
   <!-- <div > -->
   <router-outlet></router-outlet>
 <!-- </div> -->
-  `,
+  `
 })
 export class AuthComponent{
 

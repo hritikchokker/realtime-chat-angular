@@ -1,11 +1,18 @@
-.container{
+.content {
+  background-color: rgb(95, 204, 162);
+}
+
+.container {
   display: flex;
   justify-content: center;
   align-items: center;
   margin: auto;
   margin-top: 30px;
-  // height: 400px;
-  width: 500px;
+  width: 400px;
+}
+
+.example-header-image {
+  text-align: center;
 }
 
 .bounds {
@@ -13,6 +20,37 @@
   height: 800px;
 }
 
+.register-link{
+  float: right;
+  span{
+    a{
+      color: black;
+      text-decoration: none;
+    }
+    a:hover{
+      color: blue;
+    }
+  }
+}
+
+
+// .submit-btn {
+//   position: relative;
+//   display: block;
+//   button{
+//     display: absoulte;
+//     text-align: center;
+//     margin-left: 110px;
+//     width: 100px;
+//     height: 50px;
+//   }
+
+//   span {
+//     position: absolute;
+//     right: 0;
+//     bottom: 0;
+//   }
+// }
 
 .sec1 {
   background: red;
@@ -21,18 +59,40 @@
 }
 
 .sec2 {
-  background: yellow;
-  color: blue;
+  // background: rgb(82, 185, 128);
+  // color: blue;
   display: flex;
   justify-content: center;
   align-items: center;
+  border-radius: 4px;
   width: inherit;
+  height: inherit;
+
+  &__card-title {
+    text-align: center;
+    width: inherit;
+  }
 
 }
 
-mat-card,mat-focus-indicator{
-  width: inherit;
+.sec2__email {
+  width: 100%;
+  margin-bottom: 20px;
 }
+
+.mat-form-field {
+  width: 100%;
+
+}
+
+mat-card,
+mat-focus-indicator {
+  width: 450px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .sec3 {
   background: blue;
   color: white;
