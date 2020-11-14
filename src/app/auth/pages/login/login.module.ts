@@ -13,6 +13,7 @@ import { MatInputModule } from '@angular/material/input';
 import { NgModule } from '@angular/core';
 import { ReactiveFormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
+import { SimpleSnackbarModule } from 'src/app/common/components/simple-snackbar/simple-snackbar.module';
 
 @NgModule({
   declarations: [LoginComponent],
@@ -22,6 +23,7 @@ import { RouterModule } from '@angular/router';
     ReactiveFormsModule,
     MatFormFieldModule,
     FlexLayoutModule,
+    SimpleSnackbarModule,
     MatInputModule,
     MatIconModule,
     MatButtonModule,

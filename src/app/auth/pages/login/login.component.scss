@@ -34,6 +34,7 @@
 }
 
 
+
 // .submit-btn {
 //   position: relative;
 //   display: block;
@@ -73,6 +74,12 @@
     width: inherit;
   }
 
+}
+.submit-btn{
+  margin-bottom: 20px;
+  button{
+    width: 80%;
+  }
 }
 
 .sec2__email {
