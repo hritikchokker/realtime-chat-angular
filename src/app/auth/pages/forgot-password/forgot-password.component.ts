@@ -1,6 +1,17 @@
-import { Component, OnDestroy, OnInit } from '@angular/core';
-import { FormBuilder, FormGroup } from '@angular/forms';
-import { debounceTime, distinctUntilChanged, filter } from 'rxjs/operators';
+import {
+  Component,
+  OnDestroy,
+  OnInit
+} from '@angular/core';
+import {
+  FormBuilder,
+  FormGroup
+} from '@angular/forms';
+import {
+  debounceTime,
+  distinctUntilChanged,
+  filter
+} from 'rxjs/operators';
 
 import { Subscription } from 'rxjs';
 
@@ -12,8 +23,8 @@ import { Subscription } from 'rxjs';
 export class ForgotPasswordComponent implements OnInit, OnDestroy {
 
   subscription: Subscription = new Subscription();
-  emailTemp: string = '******@gmail.com';
-  readonly emailValue = '*****@gmail.com'
+  emailTemp: string = '******@****.***';
+  readonly emailValue = '*****@****.***'
   forgotForm: FormGroup
   constructor(private _fb: FormBuilder) {
     this.createForm();
@@ -41,7 +52,7 @@ export class ForgotPasswordComponent implements OnInit, OnDestroy {
             } else {
               this.emailTemp = this.emailValue;
             }
-          }else{
+          } else {
             this.emailTemp = this.emailValue;
           }
         })

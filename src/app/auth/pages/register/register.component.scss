@@ -1,0 +1,45 @@
+.container{
+  height: 100%;
+  width: 100%;
+  &__main{
+    height: inherit;
+    width: inherit;
+    &__first{
+      // margin-top: 30px;
+      width: 100%;
+      // background-color: red;
+      text-align: center;
+    }
+    &__second{
+      width: 100%;
+      margin-top:2%;
+      // background-color: blue;
+      text-align: center;
+      &__form{
+        input{
+          width: 100%;
+        }
+
+      }
+    }
+    &__third{
+
+      width: 100%;
+      // background-color: yellow;
+      text-align: center;
+    }
+
+  }
+}
+
+.submit-btn{
+  button{
+    width: 70%;
+    margin-bottom: 20px;
+  }
+}
+
+.mat-form-field{
+  width: 100%;
+  margin-bottom: 20px;
+}

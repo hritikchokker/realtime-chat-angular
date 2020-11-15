@@ -1,1 +1,61 @@
-<p>register works!</p>
+<div class="container">
+  <div class="container__main" fxLayout="row" fxLayout.md="column" fxLayout.xs="column" fxFlexFill>
+
+    <div fxFlex="33" class="container__main__first" fxFlex.xs="100">
+      <!-- first -->
+    </div>
+    <div fxFlex="33" class="container__main__second" fxFlex.xs="100">
+      <div class="container__main__second__form">
+        <mat-card>
+          <div class="sec2__card-title">
+            <h2>
+              Login
+            </h2>
+          </div>
+          <div class="sec2__form">
+            <form [formGroup]="registerForm">
+              <div class="sec2__email">
+                <mat-form-field class="example-full-width">
+                  <mat-label>Email</mat-label>
+                  <input type="email" matInput formControlName="email" placeholder="Ex. pat@example.com">
+                  <mat-hint>Errors appear instantly!</mat-hint>
+                </mat-form-field>
+              </div>
+              <div class="sec2__email">
+                <mat-form-field class="example-full-width">
+                  <mat-label>Password</mat-label>
+                  <input type="password" matInput formControlName="password" placeholder="Password here">
+                  <mat-hint>Errors appear instantly!</mat-hint>
+                </mat-form-field>
+              </div>
+              <div class="sec2__email">
+                <mat-form-field class="example-full-width">
+                  <mat-label>Confirm Password</mat-label>
+                  <input type="password" matInput formControlName="confirmPassword" placeholder="Password here">
+                  <mat-hint>Errors appear instantly!</mat-hint>
+                </mat-form-field>
+              </div>
+              <div class="submit-btn">
+                <button (click)="onSubmit()" type="button" mat-raised-button color="primary">Register</button>
+              </div>
+              <div class="submit-btn">
+                <button [routerLink]="['/auth/login']" type="button" mat-raised-button color="accent"> Login</button>
+              </div>
+              <!-- <div class="register-link">
+                  <span>
+                    <a href="javascript:void()" routerLink="/auth/forgot-password">
+                      forgot Password ?
+                    </a>
+                  </span>
+                </div> -->
+            </form>
+          </div>
+        </mat-card>
+      </div>
+    </div>
+    <div fxFlex="34" class="container__main__third" fxFlex.xs="15">
+      <!-- this -->
+    </div>
+  </div>
+
+</div>
