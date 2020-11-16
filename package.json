@@ -6,10 +6,15 @@
     "start": "ng serve",
     "build": "ng build",
     "test": "ng test",
+    "build:dev": "ng build --configuration=development",
+    "build:prod": "ng build --configuration=production",
+    "build:scully:dev": " ng build --configuration=development && scully:serve",
+    "build:scully:prod": "ng build --configuration=production && scully:serve",
     "lint": "ng lint",
     "e2e": "ng e2e",
     "scully": "scully",
-    "scully:serve": "scully serve"
+    "scully:serve": "scully serve",
+    "serve:local":"http-server -p 8080 -c-1 dist/angular-chat-app"
   },
   "private": true,
   "dependencies": {
@@ -40,6 +45,7 @@
     "@types/jasminewd2": "~2.0.3",
     "@types/node": "^12.11.1",
     "codelyzer": "^6.0.0",
+    "http-server": "^0.12.3",
     "jasmine-core": "~3.6.0",
     "jasmine-spec-reporter": "~5.0.0",
     "karma": "~5.0.0",
