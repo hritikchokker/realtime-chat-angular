@@ -11,16 +11,19 @@ const routes: Routes = [
   },
   {
     path: 'auth',
-    loadChildren: () => import('./auth/auth.module').then(m => m.AuthModule)
+    loadChildren: () => import('./auth/auth.module')
+      .then(m => m.AuthModule)
   }, {
     path: 'users',
-    loadChildren: () => import('./user/user.module').then(m => m.UserModule),
+    loadChildren: () => import('./user/user.module')
+      .then(m => m.UserModule),
     canActivate: [AuthGuard],
     canLoad: [AuthGuard]
   },
   {
-    path:'**',
-    loadChildren:()=>import('./page-not-found/page-not-found.module').then(m=>m.PageNotFoundModule)
+    path: '**',
+    loadChildren: () => import('./page-not-found/page-not-found.module')
+      .then(m => m.PageNotFoundModule)
   }
 ];
 
