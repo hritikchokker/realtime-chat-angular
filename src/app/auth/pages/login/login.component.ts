@@ -11,6 +11,7 @@ import {
 import { state, style, transition } from '@angular/animations';
 
 import { SimpleSnackbarService } from 'src/app/common/components/simple-snackbar/simple-snackbar.service';
+import { SocketioService } from 'src/app/common/services/socketio/socketio.service';
 
 @Component({
   selector: 'app-login',
@@ -20,12 +21,23 @@ import { SimpleSnackbarService } from 'src/app/common/components/simple-snackbar
 })
 export class LoginComponent implements OnInit {
 
+  message:string;
   loginForm: FormGroup
   constructor(private _fb: FormBuilder,
+    private _socket:SocketioService,
     private _snackBar: SimpleSnackbarService) {
     this.createForm();
+    this.listenForMessage()
   }
 
+
+  listenForMessage() {
+    let count = 0
+    this._socket.receieveMessage().subscribe(data => {
+      count++
+      this.message = data;
+    })
+  }
 
 
   createForm(): void {

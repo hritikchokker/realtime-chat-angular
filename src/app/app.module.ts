@@ -18,6 +18,7 @@ import { environment } from '../environments/environment';
     BrowserModule,
     BrowserAnimationsModule,
     FlexLayoutModule,
+
     AppRoutingModule,
     HttpClientModule,
     ScullyLibModule,
