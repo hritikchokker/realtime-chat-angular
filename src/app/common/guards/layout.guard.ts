@@ -1,7 +1,6 @@
 import {
   ActivatedRouteSnapshot,
   CanActivate,
-  CanLoad,
   Route,
   Router,
   RouterStateSnapshot,
@@ -12,9 +11,11 @@ import {
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 
-@Injectable()
-export class AuthGuard implements CanActivate, CanLoad {
-  constructor(private _router:Router){}
+@Injectable({
+  providedIn: 'root'
+})
+export class LayoutGuard implements CanActivate {
+  constructor(private _router: Router) { }
   canActivate(
     route: ActivatedRouteSnapshot,
     state: RouterStateSnapshot): Observable<boolean | UrlTree> | Promise<boolean | UrlTree> | boolean | UrlTree {
@@ -25,12 +26,11 @@ export class AuthGuard implements CanActivate, CanLoad {
     return this.handleAuth();
   }
 
-  private handleAuth():boolean{
-    if(!localStorage.getItem('token')){
-      this._router.navigate(['/auth/login'])
+  private handleAuth(): boolean {
+    if (localStorage.getItem('token')) {
+      this._router.navigate(['/dashboard'])
       return false;
     }
     return true;
   }
-
 }

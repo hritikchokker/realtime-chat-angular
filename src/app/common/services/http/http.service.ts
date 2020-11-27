@@ -13,4 +13,6 @@ export class HttpService {
   get():Observable<any>{
     return this._http.get(`${environment.socketUrl}/users`);
   }
+
+
 }
